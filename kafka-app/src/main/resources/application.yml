@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+app:
+  kafka:
+    orderTopic: "order-topic"
+    orderStatusTopic: "order-status-topic"
+
+spring:
+  kafka:
+    consumer:
+      group-id: "order-service-group"
+      auto-offset-reset: "earliest"
+      bootstrap-servers: "localhost:9092"
+    producer:
+      bootstrap-servers: "localhost:9092"
